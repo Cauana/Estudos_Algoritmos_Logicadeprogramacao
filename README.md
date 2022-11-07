@@ -1,1 +1,1 @@
-# Estudos_Algoritmos_Logicadeprogramacao
+Repositório dedicado ao estudo de algoritmos, foram utilizados os exercícios do livro: Lógica de programação: a construção de algoritmos e estruturas de dados André Luiz Villar Forbellone, Henri Frederico Eberspächer. - 3. ed
