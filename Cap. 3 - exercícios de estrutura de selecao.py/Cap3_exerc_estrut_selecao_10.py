@@ -1,4 +1,5 @@
-#Se Data existente
+#Verificar se é eleitor ativo, facultativo ou não votante
+
 idade = int(input('Insira sua idade: '))
 
 if idade == 16 or idade==17 or idade > 65:
