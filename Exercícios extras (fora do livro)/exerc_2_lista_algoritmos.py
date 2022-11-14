@@ -18,3 +18,5 @@ for i in range(len(notas)):
         
 print(notaatual)
 print(menorqt)
+
+#Retirar dúvida!

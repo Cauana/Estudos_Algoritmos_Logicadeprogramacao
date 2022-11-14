@@ -6,8 +6,8 @@ lista2 = []
 
 
 for num in range(1,21):
-    numero1 = random.randint(1,100)
-    numero2 = random.randint(1,100)
+    numero1 = random.randint(1,10)
+    numero2 = random.randint(1,10)
     lista1.append(numero1)
     lista2.append(numero2)
     
