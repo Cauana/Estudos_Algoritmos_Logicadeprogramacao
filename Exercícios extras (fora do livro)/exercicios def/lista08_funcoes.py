@@ -8,7 +8,10 @@
 # near_ten(17) -> False
 # near_ten(19) -> True
 def near_ten(n):
-  return
+  if  3> n%10 >-1 or 7< n%10 <10:
+    return True
+  else:
+    return False
 
 # B. lone_sum
 # Soma maluca: some os números inteiros a, b, e c
@@ -17,7 +20,20 @@ def near_ten(n):
 # lone_sum(3, 2, 3) -> 2
 # lone_sum(3, 3, 3) -> 0
 def lone_sum(a, b, c):
-  return
+  if a == b == c:
+    return 0
+  elif a == b:
+    soma = c
+    return soma
+  elif a == c:
+    soma = b
+    return soma
+  elif b == c:
+    soma = a
+    return soma
+  else: 
+    soma = a+b+c
+    return soma
 
 # C. luck_sum
 # Soma três inteiros a, b, c
@@ -26,7 +42,13 @@ def lone_sum(a, b, c):
 # lucky_sum(1, 2, 13) -> 3
 # lucky_sum(1, 13, 3) -> 1
 def lucky_sum(a, b, c):
-  return
+  if a == 13:
+    return 0
+  elif b == 13:
+    return a
+  elif c == 13:
+    return a+b
+  return a+b+c
 
 # D. double_char
 # retorna os caracteres da string original duplicados
@@ -42,7 +64,7 @@ def double_char(s):
 # count_hi('ABChi hi') -> 2
 # count_hi('hihi') -> 2
 def count_hi(s):
-  return 
+  return s.count("hi")
 
 # F. cat_dog
 # verifica se o aparece o mesmo número de vezes 'cat' e 'dog'
@@ -50,7 +72,11 @@ def count_hi(s):
 # cat_dog('catcat') -> False
 # cat_dog('1cat1cadodog') -> True
 def cat_dog(s):
-  return 
+  countcat = s.count('dog')
+  countdog = s.count('cat')
+  if countcat == countdog:
+    return True
+  return False
 
 # G. count_code
 # conta quantas vezes aparece 'code'
@@ -70,7 +96,13 @@ def count_code(s):
 # end_other('AbC', 'HiaBc') -> True
 # end_other('abc', 'abXabc') -> True
 def end_other(a, b):
-  return 
+  a.lower()
+  b.lower()
+  if a in b:
+    return True
+  elif b in a:
+    return True
+  return False
 
 # I. count_evens
 # conta os números pares da lista
@@ -78,7 +110,11 @@ def end_other(a, b):
 # count_evens([2, 2, 0]) -> 3
 # count_evens([1, 3, 5]) -> 0
 def count_evens(nums):
-  return
+  count = 0
+  for n in range(len(nums)):
+    if nums[n]%2 == 0:
+      count += 1
+  return count
 
 # J. sum13
 # retorna a soma dos números de uma lista

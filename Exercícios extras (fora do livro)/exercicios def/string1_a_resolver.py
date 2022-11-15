@@ -17,7 +17,7 @@ def donuts(n):
   if n >= 10:
     return 'Número de donuts: muitos'
   else: 
-    return 'Número de donuts:' <n>
+    return f'Número de donuts: {n}'
 
 # B. pontas
 # Dada uma string s, retorna uma string com as duas primeiras e as duas
@@ -25,7 +25,13 @@ def donuts(n):
 # Assim 'palmeiras' retorna 'paas'
 # No entanto, se a string tiver menos que 2 letras, retorna uma string vazia
 def pontas(s):
-  return
+  if len(s) >= 2:
+    s = s[0] + s[1] + s[-2] + s[-1]
+    return s
+  else:
+    s = ''
+    return s
+    
 
 # C. fixa_primeiro
 # Dada uma string s, retorna uma string onde todas as ocorrências
@@ -42,14 +48,25 @@ def fixa_primeiro(s):
 #   'mix', pod' -> 'pox mid'
 #   'dog', 'dinner' -> 'dig donner'
 def mistura2(a, b):
-  return 
+  temp0 = a[0]
+  temp1 = a[1]
+  a = a.replace(a[0],b[0])
+  a = a.replace(a[1],b[1])
+  b = b.replace(b[0], temp0)
+  b = b.replace(b[1], temp1)
+  return f'{a} {b}'
 
 # E. palindrome
 # Verifique se uma string é palíndrome
 #   palindrome('asa') True
 #   palindrome('casa') False 
 def palindrome(s):
-  return 
+  s = s.replace(" ","")
+  palavra = s[::-1]
+  if palavra == s:
+    return True
+  else: 
+    return False
 
 # F. busca
 # Verifique quantas ocorrências de uma palavra há numa frase
@@ -57,7 +74,8 @@ def palindrome(s):
 # palavra = 'ana'
 # busca ('ana e mariana gostam de banana', 'ana') == 4
 def busca(frase, palavra):
-  return
+  count = frase.count(palavra)
+  return count
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
