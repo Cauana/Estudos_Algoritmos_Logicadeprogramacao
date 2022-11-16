@@ -56,7 +56,10 @@ def lucky_sum(a, b, c):
 # double_char('AAbb') -> 'AAAAbbbb'
 # double_char('Hi-There') -> 'HHii--TThheerree'
 def double_char(s):
-  return
+  x = ''
+  for str in s:
+    x+= str + str
+  return x
 
 # E. count_hi
 # conta o número de vezes que aparece a string 'hi'
@@ -124,8 +127,15 @@ def count_evens(nums):
 # sum13([1, 2, 2, 1, 13]) -> 6
 # sum13([13, 1, 2, 3, 4]) -> 0
 def sum13(nums):
-  return
-
+  soma = 0
+  n = 0
+  while nums[n] != 13:
+      soma += nums[n]
+      if n == range(len(nums)):
+        break
+      if nums[0] == 13:
+        break
+      return soma
 
 # K. has22
 # Verifica se na lista de números inteiros aparecem dois 2 consecutivos

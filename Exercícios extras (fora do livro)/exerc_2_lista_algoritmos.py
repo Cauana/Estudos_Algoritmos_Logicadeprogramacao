@@ -11,12 +11,13 @@ troconecessario = valordopagamento-valorconta
 notas = [50,20,10,5,2,1]
 
 for i in range(len(notas)):
-    qtdadenota = troconecessario/notas[i]
-    if qtdadenota < menorqt and qtdadenota>0.9:
-        notaatual = notas[i]
-        menorqt = qtdadenota
-        
-print(notaatual)
-print(menorqt)
-
-#Retirar dúvida!
+    qtdadenota = troconecessario//notas[i]
+    if qtdadenota == 0:
+        qtdadenota = 0
+        continue
+    elif troconecessario < notas[i] and troconecessario!=0:
+        troconecessario = int(notas[i])-troconecessario
+    else:
+        troconecessario = int(troconecessario)-notas[i]
+    print(f'{qtdadenota} notas de {notas[i]} reais')
+    

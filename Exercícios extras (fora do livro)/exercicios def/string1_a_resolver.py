@@ -39,7 +39,10 @@ def pontas(s):
 # Assim 'abacate' retorna 'ab*c*te'
 # Dica: use s.replace(stra, strb) 
 def fixa_primeiro(s):
-  return
+  stra = s[0]
+  strb = s[1:]
+  strb = strb.replace(stra, '*')
+  return stra + strb
 
 # D. mistura2
 # Sejam duas strings a e b
