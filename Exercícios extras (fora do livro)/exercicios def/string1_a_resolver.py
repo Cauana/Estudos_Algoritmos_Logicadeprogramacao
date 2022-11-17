@@ -77,9 +77,11 @@ def palindrome(s):
 # palavra = 'ana'
 # busca ('ana e mariana gostam de banana', 'ana') == 4
 def busca(frase, palavra):
-  count = frase.count(palavra)
+  count = 0
+  for n in range(len(frase)-2):
+    if frase[n] == palavra[0] and frase[n+1] == palavra[1] and frase[n+2] == palavra[2]:
+      count += 1
   return count
-
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(obtido, esperado):

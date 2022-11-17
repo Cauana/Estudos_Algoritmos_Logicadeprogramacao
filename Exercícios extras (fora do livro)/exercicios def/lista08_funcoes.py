@@ -89,7 +89,11 @@ def cat_dog(s):
 # count_code('codexxcode') -> 2
 # count_code('cozexxcope') -> 2
 def count_code(s):
-  return
+  count = 0
+  for i in range(len(s)-3):
+    if s[i:i+2] == 'co' and s[i+3] == 'e':
+      count += 1
+  return count
 
 # H. end_other
 # as duas strings devem ser convertidas para minúsculo via lower()
@@ -101,9 +105,11 @@ def count_code(s):
 def end_other(a, b):
   a.lower()
   b.lower()
-  if a in b:
+  lab = len(a) - len(b)
+  lba = len(b) - len(a)
+  if a in b[lab::]:
     return True
-  elif b in a:
+  elif b in a[lba::]:
     return True
   return False
 
@@ -128,22 +134,24 @@ def count_evens(nums):
 # sum13([13, 1, 2, 3, 4]) -> 0
 def sum13(nums):
   soma = 0
-  n = 0
-  while nums[n] != 13:
-      soma += nums[n]
-      if n == range(len(nums)):
-        break
-      if nums[0] == 13:
-        break
-      return soma
-
+  for n in nums:
+    if n == 13:
+      break
+    else:
+      soma += n
+      n += 1
+  return soma 
 # K. has22
 # Verifica se na lista de números inteiros aparecem dois 2 consecutivos
 # has22([1, 2, 2]) -> True
 # has22([1, 2, 1, 2]) -> False
 # has22([2, 1, 2]) -> False
 def has22(nums):
-  return
+  for n in range(len(nums)-1):
+      if nums[n] == nums[n+1]:
+        return True
+  return False
+     
 
 # L. desafio! faça somente se já tiver acabado o EP1 e todas as listas
 # Fila de tijolos sem usar loops

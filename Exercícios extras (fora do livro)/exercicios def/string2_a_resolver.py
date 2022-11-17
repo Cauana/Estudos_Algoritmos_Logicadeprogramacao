@@ -12,7 +12,13 @@
 # adiciona 'ing' no final
 # Caso a string já termine em 'ing', acrescentará 'ly'.
 def verbing(s):
-  return
+  if len(s) >=3 and s[-3:] == 'ing':
+    return s+'ly'
+  elif len(s)< 3:
+    return s
+  elif len(s) >= 3:
+    return s + 'ing'
+  
 
 # H. not_bad
 # Dada uma string, procura a primeira ocorrência de 'not' e 'bad'
@@ -29,6 +35,19 @@ def not_bad(s):
 # Dadas 2 strings, a e b, retorna a string
 #  a-inicio + b-inicio + a-final + b-final
 def inicio_final(a, b):
+  for n in range(len(a)):
+    if n%2 == 0:
+      div = n//2
+      print(div)
+      inicio = a[:div]
+      final = a[div:]
+      return a-inicio + b-inicio + a-final + b-final
+    elif n%2 != 0:
+      div = n//2
+      inicio = a[:div]
+      final = a[div-1:]
+      return a-inicio + b-inicio + a-final + b-final
+  
   return
 
 # J. zeros finais
