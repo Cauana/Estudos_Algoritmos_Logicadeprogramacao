@@ -163,6 +163,7 @@ def has22(nums):
 # fila_tijolos(3, 1, 9) -> False
 # fila_tijolos(3, 2, 10) -> True
 def fila_tijolos(n_peq, n_gra, meta):
+  
   return
 
 # Provided simple test() function used in main() to print
