@@ -87,7 +87,16 @@ def conta2(n):
 # que tenha o início igual a n
 # Exemplo: para n = 65 retornará 16 pois 2**16 = 65536
 def inip2(n):
-  return
+  str_n = str(n)
+  index = 0
+  resultado = 0
+  while True:
+    resultado = 2 ** index
+    str_result = str(resultado)
+    if str_n == str_result[0:len(str_n)]:
+      break
+    index += 1
+  return index
 
 def test(obtido, esperado):
   if obtido == esperado:

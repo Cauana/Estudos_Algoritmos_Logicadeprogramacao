@@ -64,12 +64,11 @@ def mistura2(a, b):
 #   palindrome('asa') True
 #   palindrome('casa') False 
 def palindrome(s):
-  s = s.replace(" ","")
-  palavra = s[::-1]
-  if palavra == s:
-    return True
-  else: 
-    return False
+  invertido = ''
+  #indexfinal = len(s)-1
+  for i in range(0,len(s)):
+    invertido = s[i] + invertido
+  return s == invertido
 
 # F. busca
 # Verifique quantas ocorrências de uma palavra há numa frase
