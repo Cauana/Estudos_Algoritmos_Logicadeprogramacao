@@ -8,7 +8,7 @@ listanotasacima = []
 
 for num in range(1,5):
     nome = str(input('Digite o nome: '))
-    nota = random.randint(1,100)
+    nota = random.randint(50,100)
     listanomes.append(nome)
     listanotas.append(nota)
     
@@ -21,5 +21,19 @@ for i in range(len(listanotas)):
     if listanotas[i]>=70:
         listanomesacima.append(listanomes[i])
         listanotasacima.append(listanotas[i])
+print(listanomesacima)
+print(listanotasacima)
+
+for n in range(len(listanomesacima)):
+    for i in range(len(listanomesacima)):
+        if listanotasacima[n]>=listanotasacima[i]:
+            temp = listanomesacima[i]
+            listanomesacima[i] = listanomesacima[n]
+            listanomesacima[n] = temp
+            temp2 = listanotasacima[i]
+            listanotasacima[i] = listanotasacima[n]
+            listanotasacima[n] = temp2
+
+print(10*"-*-","Ranking",10*"-*-")
 print(listanomesacima)
 print(listanotasacima)

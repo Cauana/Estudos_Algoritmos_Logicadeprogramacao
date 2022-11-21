@@ -15,3 +15,6 @@ print(lista)
 
 #lista invertida
 print(lista2)
+
+#Também é possível inverter dessa forma
+print(lista2[::-1])

@@ -5,7 +5,7 @@ lista1 = []
 lista2 = []
 
 
-for num in range(1,21):
+for num in range(1,5):
     numero1 = random.randint(1,10)
     numero2 = random.randint(1,10)
     lista1.append(numero1)
@@ -14,12 +14,17 @@ for num in range(1,21):
 print(lista1)
 print(lista2)
 
-listauniao = lista1+lista2
-print(listauniao)
+listauniao = []
 
+for n in range(len(lista1)):
+    if lista1[n] in listauniao:
+        continue
+    else:
+        listauniao.append(lista1[n])
 
-for i in range(1,38):
-    for n in range(1,38):
-        if listauniao[i] == listauniao[n]:
-            del(listauniao[i])
+for i in range(len(lista2)):
+    if lista2[i] in listauniao:
+        continue
+    else:
+        listauniao.append(lista2[i])
 print(listauniao)

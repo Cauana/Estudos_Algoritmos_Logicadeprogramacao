@@ -8,10 +8,8 @@
 # near_ten(17) -> False
 # near_ten(19) -> True
 def near_ten(n):
-  if  3> n%10 >-1 or 7< n%10 <10:
-    return True
-  else:
-    return False
+  return 3> n%10 >-1 or 7< n%10 <10
+
 
 # B. lone_sum
 # Soma maluca: some os números inteiros a, b, e c
